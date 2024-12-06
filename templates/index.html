@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask CRUD App</title>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.png" type="image/png">
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c2c2c; /* Light black color */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Centered text styles */
+        h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        h4 {
+            margin: 10px 0 30px;
+            font-size: 1.2rem;
+            color: #bbbbbb; /* Slightly lighter for subtitle */
+        }
+
+        /* Button styles */
+        .main-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #2c2c2c; /* Same as the background for contrast */
+            background-color: #ffffff; /* Contrasting white */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-button:hover {
+            background-color: #cccccc; /* Lighter gray on hover */
+        }
+
+        /* Favicon styles */
+        .github-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- GitHub favicon with link -->
+    <a href="https://github.com/idarapatrick" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+    </a>
+
+    <!-- Centered content -->
+    <h2>Flask CRUD Application</h2>
+    <h4>Flask simple application that demonstrates Create, Read, Delete and Update Operations</h4>
+    <a href="{{ url_for('get_transactions') }}"
+     class="main-button">Access the CRUD Application</a>
+</body>
+</html>
