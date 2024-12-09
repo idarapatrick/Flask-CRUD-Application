@@ -6,12 +6,17 @@ app = Flask(__name__)
 transactions = [
     {"id": 1, "date": "2023-12-01", "amount": 5000},
     {"id": 2, "date": "2023-12-02", "amount": 40560},
-    {"id": 3, "date": "2023-12-03", "amount": 45689}
+    {"id": 3, "date": "2023-12-03", "amount": 45689},
+    {"id": 4, "date": "2024-10-04", "amount": 12348}
 ]
 
+# Home page
+@app.route("/")
+def home_page():
+    return render_template("index.html")
 
 # Read operation
-@app.route("/")
+@app.route("/transactions")
 def get_transactions():
     return render_template("transactions.html", transactions=transactions)
 
