@@ -61,6 +61,7 @@
                         <a class="btn btn-sm btn-primary" href="{{ url_for('edit_transaction', transaction_id=transaction.id) }}">Edit</a>
                         <a class="btn btn-sm btn-danger" href="{{ url_for('delete_transaction', transaction_id=transaction.id) }}">Delete</a>
                     </td>
+                    <td> {{ transaction.total }}</td>
                 </tr>
                 {% endfor %} 
             </tbody>
@@ -68,6 +69,12 @@
 
         <div class="d-flex justify-content-center">
             <a class="btn btn-success" href="{{ url_for('add_transaction') }}">Add Transaction</a>
+        </div>
+        <div class="d-flex justify-content-start">
+            <a class="btn btn-success" href="{{ url_for('search_transactions') }}">Search Transactions</a>
+        </div>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-success" href="{{ url_for('total_balance') }}">Total Balance</a>
         </div>
     </div>
 </body>
